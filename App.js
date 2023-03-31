@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Switch, ScrollView } from 'react-native';
+import { requestUserPermission } from './notifications/notifications.js';
+import { SettingsItem } from './components/SettingsItem';
+
+
 
 export default function App() {
+  requestUserPermission()
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app</Text>
-      <StatusBar style="auto" />
+      <SettingsItem name={"News"}/>
+      <SettingsItem name={"Sports"}/>
+      <SettingsItem name={"Social Media"}/>
     </View>
   );
 }
