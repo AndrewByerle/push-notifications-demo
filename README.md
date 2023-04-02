@@ -36,7 +36,7 @@ Run the eas build command `eas build --profile development --platform android` a
 Run the Development Build on the mobile device again with `npx expo start --dev-client`
 
 ## Sending a notification
-Notifications can be sent in many ways such as from the firebase console, curl, through Postman, and from a backend code (ex. Firebase admin). Postman is an easy way to test post requests to the FCM api.
+Notifications can be sent in many ways such as from the firebase console, curl, through Postman, and from the backend (ex. Firebase admin). Postman is an easy way to test post requests to the FCM api.
 
 Create a post request to the endpoint https://fcm.googleapis.com/fcm/send with Query Parameters:
 Authorization, Value: key=<FCM Server Key>
@@ -49,6 +49,8 @@ The body of the request is a raw json object. `{
      "body" : "Notification Message"
  }
 }`
+
+Sending a successful request will send a notification to the running android device
 <img width="1037" alt="Screenshot 2023-04-02 at 11 42 04 AM" src="https://user-images.githubusercontent.com/69771004/229363910-702a1ebb-4f1a-4e14-870c-fcd2d4c789fa.png">
 
 # Video Demo:
